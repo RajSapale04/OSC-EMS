@@ -37,15 +37,15 @@ if (isset($_GET['delete_id'])) {
     <?php include ("navbar.php"); ?>
     <div class="admin-container">
         <div class="admin-header">
-            <h1>Manage Categories</h1>
+            <h1>Manage Committees</h1>
         </div>
 
         <div class="admin-content">
-            <h2>Add / Edit Category</h2>
+            <h2>Add / Edit Committee</h2>
             <form method="post" action="" class="category-form">
                 <input type="hidden" name="category_id" id="category_id">
-                <label for="name">Category Name:</label>
-                <input type="text" name="name" id="name" required placeholder="Enter category name">
+                <label for="name">Committee Name:</label>
+                <input type="text" name="name" id="name" required placeholder="Enter committee name">
                 <button type="submit" class="btn-submit">Save</button>
             </form>
 

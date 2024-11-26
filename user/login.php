@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 session_start();
 include('../config/db.php');
 
@@ -14,9 +16,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = $conn->query("SELECT * FROM users WHERE email='$email' AND password='$password'");
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
+        if($user['is_blocked'] == '0'){
+
+  
+
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_name'] = $user['name'];
         header("Location: index.php");
+    }else{
+        $error="User is blocked";
+    }
     } else {
         $error = "Invalid email or password!";
     }
@@ -37,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="login-container">
         <div class="login-form">
             <h1>Login</h1>
-            <?php if (isset($error)) echo "<p class='error'>$error</p>"; ?>
+            <?php if (isset($error)) echo "<p class='error' style='color:red;'>$error</p>"; ?>
             <form method="post" action="">
                 <label>Email:</label>
                 <input type="email" name="email" required>

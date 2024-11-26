@@ -20,10 +20,12 @@ if (isset($_POST['login'])) {
     $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) > 0) {
+        
         // Admin found, create session variables
         $admin = mysqli_fetch_assoc($result);
         $_SESSION['admin_id'] = $admin['id'];
         $_SESSION['admin_name'] = $admin['username'];
+
 
         // Redirect to the admin dashboard
         header("Location: dashboard.php");

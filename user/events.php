@@ -8,10 +8,24 @@ $events = $conn->query("SELECT events.*, categories.name AS category_name, spons
     JOIN categories ON events.category_id = categories.id 
     JOIN sponsors ON events.sponsor_id = sponsors.id");
 
+// Check if the user is logged in
+$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
+
+// Fetch existing bookings if user is logged in
+if ($user_id) {
+    $bookings = [];
+    $booking_query = $conn->query("SELECT event_id FROM bookings WHERE user_id = $user_id");
+    while ($row = $booking_query->fetch_assoc()) {
+        $bookings[] = $row['event_id'];
+    }
+}
+
+// Handle booking event
 if (isset($_GET['book_event_id'])) {
     $event_id = $_GET['book_event_id'];
-    $user_id = $_SESSION['user_id'];
-    $conn->query("INSERT INTO bookings (user_id, event_id) VALUES ($user_id, $event_id)");
+    if (!in_array($event_id, $bookings)) {  // Check if the user already registered
+        $conn->query("INSERT INTO bookings (user_id, event_id) VALUES ($user_id, $event_id)");
+    }
     header("Location: bookings.php");
 }
 ?>
@@ -38,7 +52,7 @@ if (isset($_GET['book_event_id'])) {
                 <thead>
                     <tr>
                         <th>Event Name</th>
-                        <th>Category</th>
+                        <th>Committee</th>
                         <th>Sponsor</th>
                         <th>Date</th>
                         <th>Actions</th>
@@ -52,7 +66,11 @@ if (isset($_GET['book_event_id'])) {
                             <td><?php echo $row['sponsor_name']; ?></td>
                             <td><?php echo date('F j, Y', strtotime($row['event_date'])); ?></td>
                             <td>
-                                <a href="events.php?book_event_id=<?php echo $row['id']; ?>" class="btn">Book Now</a>
+                                <?php if (in_array($row['id'], $bookings)): ?>
+                                    <span class="registered">Already Registered</span>
+                                <?php else: ?>
+                                    <a href="events.php?book_event_id=<?php echo $row['id']; ?>" class="btn">Book Now</a>
+                                <?php endif; ?>
                             </td>
                         </tr>
                     <?php endwhile; ?>

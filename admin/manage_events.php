@@ -61,7 +61,7 @@ if (isset($_GET['delete_id'])) {
                 <label for="description">Description:</label>
                 <textarea name="description" id="description" required placeholder="Enter event description"></textarea>
                 
-                <label for="category_id">Category:</label>
+                <label for="category_id">Committee:</label>
                 <select name="category_id" id="category_id" required>
                     <?php while ($row = $categories->fetch_assoc()): ?>
                         <option value="<?php echo $row['id']; ?>"><?php echo $row['name']; ?></option>
@@ -88,7 +88,7 @@ if (isset($_GET['delete_id'])) {
                         <th>ID</th>
                         <th>Name</th>
                         <th>Description</th>
-                        <th>Category</th>
+                        <th>Committee</th>
                         <th>Sponsor</th>
                         <th>Date</th>
                         <th>Actions</th>

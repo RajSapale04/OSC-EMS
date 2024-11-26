@@ -5,6 +5,10 @@ body {
     margin: 0;
     padding: 0;
 }
+.error {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
 
 /* Center the login form */
 .login-container {
@@ -92,11 +96,7 @@ body {
 }
 
 /* Error message styling */
-.error {
-    color: red;
-    font-size: 14px;
-    margin-bottom: 15px;
-}
+
 
 /* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {

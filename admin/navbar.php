@@ -18,7 +18,7 @@ if (!isset($_SESSION['admin_id'])) {
     <nav class="navbar-admin">
         <ul>
             <li><a href="dashboard.php">Admin Dashboard</a></li>
-            <li><a href="manage_categories.php">Manage Categories</a></li>
+            <li><a href="manage_categories.php">Manage Committees</a></li>
             <li><a href="manage_sponsors.php">Manage Sponsors</a></li>
             <li><a href="manage_events.php">Manage Events</a></li>
             <li><a href="manage_users.php">Manage Users</a></li>

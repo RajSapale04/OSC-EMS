@@ -85,6 +85,8 @@ body {
     background-color: #e60000;
 }
 
+
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .bookings-table table {

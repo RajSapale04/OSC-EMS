@@ -41,7 +41,7 @@ FROM bookings")->fetch_assoc();
 
         <div class="dashboard-summary">
             <div class="summary-box">
-                <h3>Total Categories</h3>
+                <h3>Total Committees</h3>
                 <p><?php echo $categories['total']; ?></p>
             </div>
 

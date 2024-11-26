@@ -73,6 +73,12 @@ body {
 .btn:hover {
     background-color: #45a049;
 }
+/* Additional style for the 'Already Registered' text */
+.registered {
+    color: #ff0000;
+    font-weight: bold;
+}
+
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
