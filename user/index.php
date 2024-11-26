@@ -43,11 +43,10 @@ $user = $conn->query("SELECT * FROM users WHERE id=$user_id")->fetch_assoc();
                 <a href="bookings.php" class="btn">My Bookings</a>
             </div>
             
-            <div class="section">
+            <div class="section section-third">
                 <h2>Account Settings</h2>
-                <p>Update your profile or change your password.</p>
+                <p>Update your profile</p>
                 <a href="profile.php" class="btn">Update Profile</a>
-                <a href="change_password.php" class="btn">Change Password</a>
             </div>
         </div>
     </div>

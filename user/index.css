@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     color: #333;
 }
 
@@ -34,10 +34,9 @@ body {
 
 /* Dashboard Content Styling */
 .dashboard-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
 .section {
@@ -45,7 +44,6 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 30%;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -54,6 +52,10 @@ body {
     font-size: 24px;
     margin-bottom: 10px;
     color: #333;
+}
+
+.section-third {
+    grid-column: span 2;
 }
 
 .section p {

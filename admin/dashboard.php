@@ -67,17 +67,17 @@ FROM bookings")->fetch_assoc();
 
             <div class="summary-box">
                 <h3>Pending Bookings</h3>
-                <p><?php echo $bookings['pending']; ?></p>
+                <p><?php echo $bookings['pending'] ? $bookings['pending'] : 0; ?></p>
             </div>
 
             <div class="summary-box">
                 <h3>Confirmed Bookings</h3>
-                <p><?php echo $bookings['confirmed']; ?></p>
+                <p><?php echo $bookings['confirmed'] ? $bookings['confirmed'] : 0;?></p>
             </div>
 
             <div class="summary-box">
                 <h3>Cancelled Bookings</h3>
-                <p><?php echo $bookings['cancelled']; ?></p>
+                <p><?php echo $bookings['cancelled'] ? $bookings['cancelled'] : 0; ?></p>
             </div>
         </div>
 
