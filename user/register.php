@@ -11,12 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     $exists = $conn->query("SELECT * FROM users WHERE email='$email'");
     if ($exists->num_rows > 0) {
         $error = "Email already registered!";
     } else {
-        $conn->query("INSERT INTO users (name, email, password, is_blocked) VALUES ('$name', '$email', '$password', 0)");
+        $conn->query("INSERT INTO users (name, email, password, is_blocked) VALUES ('$name', '$email', '$hashed_password', 0)");
         header("Location: login.php");
     }
 }
