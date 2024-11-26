@@ -1,0 +1,94 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Navbar List */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Navbar Links */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    color: #fff;
+}
+
+/* Different Navbars for Admin, User, and Guest */
+
+/* Admin Navbar */
+.navbar-admin {
+    background-color: #444;
+}
+
+.navbar-admin ul li a {
+    background-color: #555;
+}
+
+.navbar-admin ul li a:hover {
+    background-color: #4CAF50;
+}
+
+/* User Navbar */
+.navbar-user {
+    background-color: #444;
+}
+
+.navbar-user ul li a {
+    background-color: #555;
+}
+
+.navbar-user ul li a:hover {
+    background-color: #4CAF50;
+}
+
+/* Guest Navbar */
+.navbar-guest {
+    background-color: #444;
+}
+
+.navbar-guest ul li a {
+    background-color: #555;
+}
+
+.navbar-guest ul li a:hover {
+    background-color: #4CAF50;
+}
+
+/* Responsive Navbar (for smaller screens) */
+@media screen and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,72 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Dashboard Header Styling */
+.dashboard-header h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #1E3A8A; /* Blue color for the header */
+    margin-bottom: 30px;
+}
+
+/* Dashboard Summary Box Styling */
+.dashboard-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Individual Summary Box Styling */
+.summary-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+}
+
+.summary-box h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.summary-box p {
+    font-size: 24px;
+    color: #1E3A8A; /* Blue color for stats */
+    font-weight: bold;
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+    .dashboard-summary {
+        grid-template-columns: 1fr;
+        margin-bottom: 20px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 28px;
+    }
+
+    .summary-box h3 {
+        font-size: 18px;
+    }
+
+    .summary-box p {
+        font-size: 20px;
+    }
+}

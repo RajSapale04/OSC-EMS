@@ -1,0 +1,98 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Admin Container */
+.admin-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Admin Header */
+.admin-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.admin-header h1 {
+    font-size: 36px;
+    color: #1E3A8A; /* Blue color for header */
+}
+
+/* Admin Content Section */
+.admin-content {
+    margin-top: 20px;
+}
+
+/* Table Styling */
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.booking-table th, .booking-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.booking-table th {
+    background-color: #1E3A8A;
+    color: #fff;
+    font-size: 16px;
+}
+
+.booking-table td {
+    background-color: #fff;
+    color: #333;
+}
+
+.booking-table tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+/* Action Buttons */
+.booking-table a {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.btn-confirm {
+    background-color: #007BFF; /* Blue color for Confirm */
+    color: #fff;
+}
+
+.btn-confirm:hover {
+    background-color: #0056b3;
+}
+
+.btn-cancel {
+    background-color: #dc3545; /* Red color for Cancel */
+    color: #fff;
+}
+
+.btn-cancel:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .booking-table th, .booking-table td {
+        padding: 8px;
+    }
+
+    .admin-header h1 {
+        font-size: 28px;
+    }
+}

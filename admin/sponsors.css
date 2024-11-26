@@ -1,0 +1,119 @@
+/* General styles for admin pages */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Admin container for main content */
+.admin-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Header for the admin dashboard */
+.admin-header h1 {
+    text-align: center;
+    color: #003366;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Form styling for adding or editing sponsors */
+.sponsor-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sponsor-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #003366;
+}
+
+.sponsor-form input, .sponsor-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.sponsor-form button {
+    padding: 10px;
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sponsor-form button:hover {
+    background-color: #0051A1;
+}
+
+/* Sponsor table styling */
+.sponsor-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.sponsor-table th, .sponsor-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.sponsor-table th {
+    background-color: #003366;
+    color: #fff;
+}
+
+.sponsor-table td {
+    background-color: #f9f9f9;
+}
+
+/* Table action buttons */
+.btn-edit, .btn-delete {
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.btn-edit {
+    background-color: #007BFF;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #0056b3;
+}
+
+.btn-delete {
+    background-color: #FF5733;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #e44d31;
+}
